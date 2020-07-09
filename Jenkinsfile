@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage("Run Test"){
 			steps{
-				sh "docker-compose up automation-practice webapp-security"
+				// sh "docker-compose up automation-practice webapp-security"
 			}
 		}
 	}
