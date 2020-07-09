@@ -11,10 +11,5 @@ pipeline{
 				sh "docker-compose up -d selenium-hub chrome firefox"
 			}
 		}
-		stage("Run Test"){
-			steps{
-				sh "docker-compose up automation-practice webapp-security"
-			}
-		}
 	}
 }
