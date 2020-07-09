@@ -11,12 +11,10 @@ pipeline{
 				sh "docker-compose up -d selenium-hub chrome firefox"
 			}
 		}
-		
-	}
-	post{
-		always{
-			archiveArtifacts artifacts: 'output/**'
-			sh "sudo rm -rf output/"
+		stage("Run Test"){
+			steps{
+				sh "docker-compose up automation-practice webapp-security"
+			}
 		}
 	}
 }
